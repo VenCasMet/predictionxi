@@ -5,12 +5,14 @@ from typing import List   # ✅ ADD THIS
 from team_selector import generate_team
 
 app = FastAPI()
+origins = [
+    "http://localhost:4200",
+    "https://your-vercel-project-name.vercel.app"
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://football-xi-optimizer.vercel.app"
-    ],
+    allow_origins=origins,   # 👈 NOT ["*"] when using credentials
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
