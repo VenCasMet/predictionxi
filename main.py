@@ -10,7 +10,7 @@ app = FastAPI()
 # ✅ THEN define origins
 origins = [
     "http://localhost:4200",
-    "https://predictionxi-frontend.vercel.app"
+    "https://vcmfootballxi.vercel.app/"
 ]
 
 # ✅ THEN add middleware
