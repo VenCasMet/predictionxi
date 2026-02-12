@@ -4,11 +4,11 @@ from pydantic import BaseModel
 from typing import List   # ✅ ADD THIS
 from team_selector import generate_team
 
-app = FastAPI()
 origins = [
     "http://localhost:4200",
-    "https://your-vercel-project-name.vercel.app"
+    "https://predictionxi-frontend.vercel.app"
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
